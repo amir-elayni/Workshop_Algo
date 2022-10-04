@@ -1,0 +1,43 @@
+ALGORITHM Read_Sentence
+VAR
+    compt_c:INTEGER  ;  //compteur caractere  
+    compt_m:INTEGER ; //compteur mot
+    compt_v:INTEGER ; // Compteur voyelle 
+    i:INTEGER;   
+    c:CHAR;
+
+
+BEGIN
+
+Read(c) ;
+
+WHILE (c <> '.') DO
+        compt_c:= Len(c) // Len(c) :nombre de caractere 
+
+        FOR i FROM 1 TO Len(c)  DO
+
+        IF (c in['a','e','i','o','y','u'] )  THEN
+         
+        compt_v:=compt_v+1; //nombre de voyelle 
+
+         END_IF 
+
+        IF(c ='') THEN
+
+        compt_m := compt_m+1 ;
+
+         
+        END_IF
+
+
+      i=i+1 
+
+        END_FOR
+
+        END_WHILE
+
+write "The length of the sentence is",compt_c,"caracters" 
+write "The number of word in the sentence is",compt_m,"words"
+write The number of voywel in the sentence is ",compt_v,"voywels" 
+
+END
